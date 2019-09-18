@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Anya Zinoveva - Project 1 for DGMD E-3</title>
+    <title>Anya Zinoveva - Proj. 1 for DGMD E-3</title>
     <meta charset='utf-8'>
 
 </head>
