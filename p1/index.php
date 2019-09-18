@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>John Gosier</title>
+    <title>Anya Zinoveva - Project 1 for DGMD E-3</title>
     <meta charset='utf-8'>
 
 </head>
