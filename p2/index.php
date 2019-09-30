@@ -37,6 +37,9 @@
         <li>The winner is <?php echo $winner; ?></li>
     <?php } ?>
     </ul>
+    <ul>
+    <li>The final winner is <?php echo $finalwinner; ?></li>
+    </ul>
 
 </body>
 </html>
