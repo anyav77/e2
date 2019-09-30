@@ -16,6 +16,6 @@
     <p>
         You have $<?php echo $total; ?> in your piggy bank.
     </p>
-
+    You have <?php echo $quarter; ?> quarters in your bank.
 </body>
 </html>
