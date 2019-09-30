@@ -4,6 +4,7 @@ $moves = ["rock", "paper", "scissors"];
 $winner = null;
 $finalwinner = null;
 $player1scores = [];
+$player2scores = [];
 
 
 
@@ -25,13 +26,14 @@ for($i = 0; $i < 5; $i++) {
     } else{
         var_dump('Player B wins');
         $winner = "Player B";
+        $player2scores[] = 1;
     }
 }
 var_dump(count($player1scores));
 
 # Calculate the final winner, based on Player A scores
 
-if (count($player1scores) >= 3){
+if (count($player1scores) >= count($player2scores)){
     $finalwinner = "Player A";
 }else{
     $finalwinner = "Player B";
