@@ -25,21 +25,15 @@
 
     <h2>Results</h2>
     <ul>
-        <li>Player A picks <?php echo $player1Move; ?></li>
-        <li>Player B picks to <?php echo $player2Move; ?></li>
-        <li>The winner is <?php echo $winner; ?></li>
-        <li>Player A picks <?php echo $player1Move; ?></li>
-        <li>Player B picks to <?php echo $player2Move; ?></li>
-        <li>The winner is <?php echo $winner; ?></li>
-    </ul>
-    <ul>
-    <?php for ($i = 0; $i < 5; $i++) { ?>
-        <li>The winner is <?php echo $winner; ?></li>
+    <?php foreach($winner as $key => $winner) { ?>
+        <li>Player A chooses </li>
+        <li>Player B chooses </li>
+        <li type = none>Round <?php echo $key + 1; ?> winner is <?php echo $winner; ?><br><br></li>
     <?php } ?>
     </ul>
-    <ul>
-    <li>The final winner is <?php echo $finalwinner; ?></li>
-    </ul>
+
+
+    <h3>and the final winner is... <?php echo $finalwinner; ?></h3>
 
 </body>
 </html>
