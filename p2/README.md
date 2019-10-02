@@ -5,7 +5,6 @@
 ## Game planning
 * Two players randomly choose rock, paper, scissors
     * define an array of options: rock, paper, scissors
-    * define a variable $winner
     * define $player1moves: a random number between 3 intrigers
     * define $player2moves: a random number between 3 intrigers
     * create empty arrays for $player1scores and $player2scores
@@ -38,3 +37,21 @@
 ## Outside resources
 
 ## Notes for instructor
+
+I tried nested loops to creAte multiple rounds, but I ran into the warnings and errors.
+
+I also tried this approach:
+
+```html
+    <h2>Results</h2>
+    <ul>
+    <?php foreach($winner as $key => $winner) { ?>
+        <li>Player A chooses </li>
+        <li>Player B chooses </li>
+        <li type = none>Round <?php echo $key + 1; ?> winner is <?php echo $winner; ?><br><br></li>
+    <?php } ?>
+    </ul>
+```
+It would output the winner for each round, but I couldn't get the winner results this way
+
+You can see the previous version in the prev folder

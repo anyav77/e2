@@ -2,15 +2,11 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-
     <title>Rock Paper Scissors</title>
     <meta charset='utf-8'>
-
 </head>
-
 <body>
     <h1>Rock Paper Scissors</h1>
-
     <h2>Mechanics</h2>
     <ul>
         <li>Two players randomly choose rock, paper, scissors</li>
@@ -22,20 +18,14 @@
         <li>The player with the most wins is the final winner</li>
     </ul>
     
-
     <h2>Results</h2>
     <ul>
-    
-    <?php 
-    foreach($result as $key => $val){ ?>
-        <li><?php echo $key . " : " . $val; ?></li>
+    <?php foreach($winner as $key => $winner) { ?>
+        <li>Player A chooses </li>
+        <li>Player B chooses </li>
+        <li type = none>Round <?php echo $key + 1; ?> winner is <?php echo $winner; ?><br><br></li>
     <?php } ?>
- 
     </ul>
-    
     <h3>and the final winner is... <?php echo $finalwinner; ?></h3>
-    <p>Player 1 Scores are: <?php echo count($player1scores) ?></p>
-    <p>Player 2 Scores are: <?php echo count($player2scores) ?></p>
-
 </body>
 </html>
