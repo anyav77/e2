@@ -1,5 +1,4 @@
 <?php
-
 $moves = ["rock", "paper", "scissors"];
 $finalwinner = null;
 $player1scores = [];
@@ -19,14 +18,9 @@ for($i = 0; $i < 5; $i++) {
     $player2Move = $moves[rand(0, 2)];
     $result['player1'] = $player1Move;
     $result['player2'] = $player2Move;
-    // var_dump($result['player1']);
-    // var_dump($result['winner']);
-
 
     if($player1Move == $player2Move){
         $result['winner'] = "a tie";
-        // $player1scores[] = 0.5;
-        // $player2scores[] = 0.5;
     }elseif(($player1Move == "rock" and $player2Move == "scissors") || ($player1Move == "paper" and $player2Move == "rock") || ($player1Move == "scissors" and $player2Move == "paper")) {
         $result['winner'] = "Player A";
         $player1scores[] = 1;
