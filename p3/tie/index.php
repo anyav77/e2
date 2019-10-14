@@ -7,7 +7,7 @@
     <style>
         .winner {color: green;}
         .looser {color: red;}
-        .tie {color: yellow;}
+        .tie {color: orange;}
     </style>
 </head>
 <body>
@@ -37,8 +37,10 @@
     <ul>
         <li>You chose <?php echo $results['player1'] ?></li>
         <li>Computer chose <?php echo $results['player2'] ?></li>
-        <?php if($results['winner']){ ?>
+        <?php if($results['winner']=='You won!'){ ?>
         <li class="winner"><?php echo $results['winner'] ?></li>
+        <?php }else if($results['winner']=="It is a tie"){ ?>
+        <li class="tie"><?php echo $results['winner'] ?></li>
         <?php }else{ ?>
         <li class="looser">You lost...</li>
         <?php } ?>
