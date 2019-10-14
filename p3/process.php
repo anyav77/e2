@@ -12,7 +12,7 @@ if ($player1Move == $player2Move) {
 } elseif (($player1Move == "rock" and $player2Move == "scissors") || ($player1Move == "paper" and $player2Move == "rock") || ($player1Move == "scissors" and $player2Move == "paper")) {
     $winner = 'You won!';
 } else {
-
+    $winner = 'You lost...';
 }
 
 
