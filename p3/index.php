@@ -7,14 +7,14 @@
     <style>
         .winner {color: green;}
         .looser {color: red;}
-        .tie {color: orange;}
+        .tie {color: purple;}
     </style>
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
     <h2>Instructions</h2>
     <ul>
-        <li>Select rock, paper, scissors form the list</li>
+        <li>Select rock, paper, scissors from the list</li>
         <li>Click submit</li>
         <li>Your selection will be compared to the computer's selection:</li>
         <li>If the choices match, it's a tie</li>
