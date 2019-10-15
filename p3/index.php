@@ -14,9 +14,9 @@
     <h1>Rock Paper Scissors</h1>
     <h2>Instructions</h2>
     <ul>
-        <li>Select rock, paper, scissors from the list</li>
+        <li>Choose rock, paper, scissors from the list</li>
         <li>Click submit</li>
-        <li>Your selection will be compared to the computer's selection:</li>
+        <li>Your choice will be compared to the computer's choice:</li>
         <li>If the choices match, it's a tie</li>
         <li>Rock beats scissors</li>
         <li>Paper beats rock</li>

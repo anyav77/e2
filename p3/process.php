@@ -1,10 +1,13 @@
 <?php
 session_start();
 
+
 $moves = ["rock", "paper", "scissors"];
 $winner = null;
 $player1Move = $_GET['choice'];
 $player2Move = $moves[rand(0, 2)];
+
+# Compare user's selection to the computer's selection; Determine the winner
 
 if ($player1Move == $player2Move) {
     $winner = "It is a tie";
@@ -15,6 +18,7 @@ if ($player1Move == $player2Move) {
     $winner = 'You lost...';
 }
 
+# Collect the results
 
 $results = [
     'winner' => $winner,
@@ -22,5 +26,6 @@ $results = [
     'player2' => $player2Move,
 ];
 
+# Output the results to the session; redirect back to index.php
 $_SESSION['results'] = $results;
 header('Location: index.php');
