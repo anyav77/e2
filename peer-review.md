@@ -40,15 +40,25 @@ $moves = [
 ```
 
 rand - Generate a random integer (defines the player moves)
+
 header - Send a raw HTTP header (redirects the back to index.php)
+
 session_start - Start new or resume existing session
+
 $_SESSION - superglobal that stores the data in a session
+
 $_GET - variable used to collect data from the form witht he method GET
+
 if / else if / else  statement - defined the conditions
+
 session_start - Start new or resume existing session
+
 isset - Determine if a variable is declared and is different than NULL
+
 true/false - bullean statements equal to 0 and 1
+
 require - connects index-controller.php to index.php (copies the code from the controller the ther viewer)
+
 echo - outputs the infromation (from the controller th toe viewer)
 
 ### Are there any parts of the code that you found interesting or taught you something new?
@@ -67,6 +77,7 @@ I don't understand what 'unknown' condition is and how it will be determined.
 
 ### Are there any best practices discussed in course material that you feel were not addressed in the code?
 The link in the README.md is not clickable.
+
 DRY: The elseif statements could be consolidated into two statements:
 
 ```php
