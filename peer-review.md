@@ -11,12 +11,14 @@
 No
 I did, however, notice an inconsistency between the README.md and the game:
 > If the user doesn't select anything, tell them to select a play. 
+
 This functionality was referenced in README.md and attempted in process.php, but I wasn't able to reproduce it.
 
 
 ### Referencing the course nots on [Form design flow](https://hesweb.dev/e2/notes#/php/form-flow), describe the form design flow used in this project.
 Design C: 
 process.php receives the data from the form on index.php, stores the information in the session  and redirects to index.php.
+
 index-controller.php retrieves the information from the session and displays it on index.php
 
 
@@ -27,7 +29,7 @@ Not observed.
 No.
 
 ### List any/all built-in PHP methods used with a brief summary of what the method does
-session_start - Start new or resume existing session
+
 array - create an array, for example 
 ```php 
 $moves = [
@@ -37,12 +39,9 @@ $moves = [
 ];
 ```
 
-```php
-rand(0,2)
-```
 rand - Generate a random integer (defines the player moves)
-
 header - Send a raw HTTP header (redirects the back to index.php)
+session_start - Start new or resume existing session
 $_SESSION - superglobal that stores the data in a session
 $_GET - variable used to collect data from the form witht he method GET
 if / else if / else  statement - defined the conditions
