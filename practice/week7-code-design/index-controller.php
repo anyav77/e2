@@ -1,11 +1,9 @@
 <?php
 
 $winner = [];
-$finalwinner = null;
 $player1scores = 0;
 $player2scores = 0;
 $result = [];
-
 
 
 for ($i = 0; $i < 5; $i++) {
@@ -28,30 +26,31 @@ for ($i = 0; $i < 5; $i++) {
 }
 # Calculate the final winner, based on Player A scores
 
-
-
 function finalScore($player1scores, $player2scores)
 {
     $winningScore = 0;
+    $finalwinner = null;
     if ($player1scores > $player2scores) {
         $finalwinner = "Player A";
         $winningScore = $player1scores;
-        var_dump($winningScore);
-        return $winningScore;
+        //var_dump($winningScore);
+        return array($winningScore, $finalwinner);
     } elseif ($player1scores == $player2scores) {
         $finalwinner = "It's a tie";
         $winningScore = $player1scores;
-        var_dump($winningScore);
-        return $winningScore;
+        //var_dump($winningScore);
+        return array($winningScore, $finalwinner);
     } else {
         $finalwinner = "Player B";
         $winningScore = $player2scores;
-        var_dump($winningScore);
-        return $winningScore;
+        //var_dump($winningScore);
+        return array($winningScore, $finalwinner);
     }
 }
-
+//var_dump($winningScore); // returns NULL
 finalScore($player1scores, $player2scores);
+$winningScore = finalScore($player1scores, $player2scores);
+$finalwinner = finalScore($player1scores, $player2scores);
 
 
 function makeMove()

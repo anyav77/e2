@@ -3,13 +3,13 @@
 + Production URL: <http://p3.atozez.com>
 
 ## Game planning
-* Select rock, paper, scissors from the list
+* Choose rock, paper, scissors from the list
     * create form elements
     * add radio inputs and labels for rock, paper, scissors
 * Click submit
     * add the submit button
     * add action and method to the form element
-* Your selection will be compared to the computer's selection:
+* Your choice will be compared to the computer's choice:
     * define an array of options: rock, paper, scissors
     * define $winner variable and set it to null
     * define $player1moves: an input value from the form
