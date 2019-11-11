@@ -1,12 +1,18 @@
 <?php
 
-echo date("D M j g:ia");
+ $a = true;
+ $b = 8;
+ $c = ($a and $b > 10) ? 'x' : 'y';
+
+var_dump($c);
+
+// echo date("D M j g:ia");
 
 // $fruits = ['apple', 'grape', 'pear'];
 
-// $search_array = array('first' => 1, 'second' => 4);
+// $search_array = array('first' => 1, 'second' => 2);
 // if (array_key_exists('first', $search_array)) {
-//     echo "The 'first' element is in the array is"." ".$fruits[1];
+// echo "The 'first' element is in the array is"." ".$fruits[1];
 // }
 //$search_array = fruits('grape' => 1, 'pear' => 2);
 
@@ -20,12 +26,4 @@ echo date("D M j g:ia");
 
 // foreach (str_split('five') as $key => $value) {
 
-//     for ($i = 0; $i < 3; $i++) {
-        
-//         $x++;
-        
-
-//     }
-
-// }
-// var_dump($x);
+// for ($i = 0; $i < 3; $i++) { // $x++; // } // } // var_dump($x);
