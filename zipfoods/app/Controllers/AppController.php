@@ -24,4 +24,9 @@ class AppController extends Controller
     {
         return $this->app->view('about');
     }
+
+    public function show()
+    {
+        return 'Show details for an individual product...';
+    }
 }
