@@ -22,7 +22,9 @@ class ProductController extends Controller
         $id = $this->app->param('id');
         $product = $this->products->getById($id);
         if (is_null($product)) {
-            return $this->app->view('errors.404');
+            return $this->app->view('products.missing', [
+                'id'=>$id
+            ]);
         }
 
         return $this->app->view('products.show', [
