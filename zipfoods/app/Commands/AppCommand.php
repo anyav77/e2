@@ -34,6 +34,12 @@ class AppCommand extends Command
             'content' => 'text',
             'product_id' => 'int',
         ]);
+
+        /*$this->app->db()->createTable('coupons', [
+            'code' => 'varchar(255)',
+            'discount' => 'decimal(10,2)',
+            'expiration' => 'timestamp'
+        ]);*/
         
         dump('Migration complete; check the database for your new tables.');
     }

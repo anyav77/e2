@@ -4,13 +4,13 @@
 
 <head>
 
-    <title>Catalog test</title>
+    <title>W7 test</title>
     <meta charset='utf-8'>
 
 </head>
 
 <body>
-    <h1>Catalog test</h1>
+    <h1>W7 test</h1>
 
 
 </body>

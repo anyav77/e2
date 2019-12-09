@@ -25,6 +25,7 @@ class AppController extends Controller
         return $this->app->view('about');
     }
 
+
     public function practice()
     {
         # Set up all the variables we need to make a connection

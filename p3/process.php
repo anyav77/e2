@@ -7,7 +7,7 @@ $winner = null;
 $player1Move = $_GET['choice'];
 $player2Move = $moves[rand(0, 2)];
 
-# Compare user's selection to the computer's selection; Determine the winner
+# Compare the results; determine the winner
 
 if ($player1Move == $player2Move) {
     $winner = "It is a tie";

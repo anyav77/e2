@@ -78,6 +78,12 @@ Product Show
     margin: auto;
 }
 
+#product-review input[type=number] {
+    text-align: center;
+    width: 20%;
+    margin: auto;
+}
+
 #product-review textarea {
     height: 150px;
 }
