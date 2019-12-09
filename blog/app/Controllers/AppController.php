@@ -13,7 +13,8 @@ class AppController extends Controller
 
     public function posts()
     {
-        return $this->app->view('posts');
+        $posts = $this->app->db()->all('posts');
+        return $this->app->view('posts', ['posts'=>$posts]);
     }
     public function post()
     {
