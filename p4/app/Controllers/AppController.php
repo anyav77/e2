@@ -12,7 +12,8 @@ class AppController extends Controller
     }
     public function attempts()
     {
-        return $this->app->view('attempts');
+        $attempts = $this->app->db()->all('attempts');
+        return $this->app->view('attempts', ['attempts'=>$attempts]);
     }
 
     public function attempt()
