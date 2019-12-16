@@ -1,3 +1,32 @@
-#logo {
-    width:300px;
+body {
+    text-align: center;
 }
+
+a#logo {
+    text-decoration: none;
+    color: grey;
+}
+
+header {
+    margin: 20px 0 5px 0;
+}
+
+h2 {margin-top: 10px}
+
+label {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+

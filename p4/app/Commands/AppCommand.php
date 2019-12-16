@@ -12,10 +12,10 @@ class AppCommand extends Command
     public function migrate()
     {
         $this->app->db()->createTable('attempts', [
-            'timestamp' => 'DATE',
-            'player1' => 'INT',
-            'player2' => 'INT',
-            'winner' => 'INT',
+            'timestamp' => 'DATETIME',
+            'player1' => 'varchar(255)',
+            'player2' => 'varchar(255)',
+            'winner' => 'varchar(255)',
         ]);
         dump('Migration complete');
     }
@@ -30,11 +30,12 @@ class AppCommand extends Command
 
             # Set up an attempt
             $attempt = [
-                'timestamp' => $faker->date($format = 'Y-m-d', $max = 'now'), // '1979-06-09',
+                'timestamp' => $faker->dateTimeThisMonth()->format('Y-m-d H:i:s'),
+                //'timestamp' => $faker->date($format = 'Y-m-d', $max = 'now'), // '1979-06-09',
                 //'timestamp' => $faker->dateTime($max = 'now'), // DateTime('2008-04-25 08:37:17', 'UTC')
-                'player1' => rand(0, 2), # Alternate between 0 and 2
-                'player2' => rand(0, 2), # Alternate between 0 and 2
-                'winner' => rand(0, 2), # Alternate between 0 and 2
+                'player1' => $faker->word, # Alternate between 0 and 2
+                'player2' => $faker->word, # Alternate between 0 and 2
+                'winner' => $faker->word, # Alternate between 0 and 2
             ];
 
             # Insert the review

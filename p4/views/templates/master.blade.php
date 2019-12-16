@@ -9,6 +9,9 @@
 
     <link rel='shortcut icon' href='/favicon.ico'>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
     <link href='/css/app.css' rel='stylesheet'>
 
     @yield('head')
@@ -18,7 +21,8 @@
 <body>
 
     <header>
-        <a href="/"><img id='logo' src='/images/rps-logo.png' alt='Rock Paper Scissors Logo'>
+        <a href="/" id="logo">
+            <img src='/images/rps-logo.png' alt='Rock Paper Scissors Logo'>
             <h1>{{ $app->config('app.name') }}</h1>
         </a>
     </header>

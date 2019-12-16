@@ -9,7 +9,7 @@ Attempts History
 
 <ul>
     @foreach($attempts as $attempt)
-    <li>{{ $attempt['winner']}}</li>
+    <li>{{ $attempt['timestamp']}}</li>
     @endforeach
 </ul>
 

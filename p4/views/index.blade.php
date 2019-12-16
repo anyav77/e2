@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<a href="/attempts">View the history of attempts </a>
 <h2>Instructions</h2>
 <ul>
     <li>Choose rock, paper, scissors from the list</li>
@@ -15,14 +16,22 @@
     <li>Paper beats rock</li>
     <li>Scissors beat paper</li>
 </ul>
-<form method="GET" action="process.php">
-    <input type="radio" value="rock" id="rock" name="choice">
+
+<form method="POST" action="process/">
     <label for="rock">Rock</label>
-    <input type="radio" value="paper" id="paper" name="choice">
+    <input type="radio" id="rock" name="choice" value="rock">
     <label for="paper">Paper</label>
-    <input type="radio" value="scissors" id="scissors" name="choice">
+    <input type="radio" id="paper" name="choice" value="paper">
     <label for="scissors">Scissors</label>
+    <input type="radio" id="scissors" name="choice" value="scissors">
     <br>
-    <button type="submit">Submit</button>
+    <button type="submit">Submit Results</button>
 </form>
+
+@if($player1)
+<div class="alert alert-success">
+    You selected {{$player1}}
+</div>
+@endif
+
 @endsection
