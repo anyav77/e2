@@ -18,6 +18,14 @@
 <div class="alert alert-warning">
     It's a tie...
 </div>
+@elseif($app->old('playerwon'))
+<div class="alert alert-success">
+    You won!
+</div>
+@elseif($app->old('computerwon'))
+<div class="alert alert-dark">
+    You lost...
+</div>
 @endif
 
 
@@ -31,17 +39,16 @@
     @if($player2)
     Computer selected {{ $player2 }}<br>
     @endif
+    @if($winner)
+    Winner is {{ $winner }}<br>
+    @endif
 </div>
 
 @if($winner['Player'])
 player won
-@endif
-
-@if($winner['Computer'])
+@elseif($winner['Computer'])
 computer won
-@endif
-
-@if($winner['Tie'])
+@elseif($winner['Tie'])
 tie
 @endif
 
@@ -63,8 +70,6 @@ tie
     <br>
     <input type="text" id="fname" name="fname" value="{{ $app->old('name')}}">
     <br>
-    <input type="hidden" id="timestamp" name="timestamp" value="2019-12-13 23:06:54">
-
     <input type="radio" id="rock" name="choice" value="rock">
     <label for="rock">Rock</label>
 

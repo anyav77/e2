@@ -16,6 +16,10 @@ class AppController extends Controller
         $player2 = $this->app->old('player2', null);
         $winner = $this->app->old('winner', null);
 
+        # DEBUG THE CONTENTS OF WINNER
+        dump($winner);
+        dump($player1);
+
         return $this->app->view('index', [
             'name' => $name,
             'player1' => $player1,
@@ -48,6 +52,7 @@ class AppController extends Controller
         $winner = null;
         $player1Move = $this->app->input('choice', 'test');
         $player2Move = $moves[rand(0, 2)];
+        //$timestamp = date('Y-m-d H:i:s');
 
 
         # Compare the results; determine the winner
@@ -62,11 +67,10 @@ class AppController extends Controller
             $winner = 'Computer';
             //return $this->app->redirect('/', ['computerwon' => true]);
         }
-
         # extract the data from the form, make selection for player 2
         $data = [
             'name' => $this->app->input('fname', 'Anonymous Player'),
-            'timestamp' => $this->app->input('timestamp', 'no timestamp recorded'),
+            'timestamp' => date('Y-m-d H:i:s'),
             'player1' => $player1Move,
             'player2' => $player2Move,
             'winner' => $winner,
