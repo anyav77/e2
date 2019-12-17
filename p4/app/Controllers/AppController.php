@@ -8,8 +8,19 @@ class AppController extends Controller
      */
     public function index()
     {
+        # This following line would only get executed *if* all of the above validation tests passed
+        # Otherwise, the user is auto-redirected back to the form
+
+        $name = $this->app->old('name', null);
         $player1 = $this->app->old('player1', null);
-        return $this->app->view('index', ['player1' => $player1]);
+        $player2 = $this->app->old('player2', null);
+        $winner = $this->app->old('winner', null);
+        return $this->app->view('index', [
+            'name' => $name,
+            'player1' => $player1,
+            'player2' => $player2,
+            'winner' => $winner,
+        ]);
     }
     public function attempts()
     {
@@ -19,10 +30,19 @@ class AppController extends Controller
 
     public function attempt()
     {
-        return $this->app->view('attempt');
+        $attemptId = $this->app->param('id');
+        $attempt = $this->app->db()->findById('attempts', $attemptId);
+        if (is_null($attempt)) {
+            return $this->app->redirect('/attempts', ['attemptNotFound' => true]);
+        }
+        return $this->app->view('attempt', ['attempt' => $attempt]);
     }
     public function process()
     {
+        $this->app->validate([
+            'choice' => 'required'
+        ]);
+        
         $moves = ["rock", "paper", "scissors"];
         $winner = null;
         $player1Move = $this->app->input('choice', 'test');
@@ -41,7 +61,8 @@ class AppController extends Controller
 
         # extract the data from the form, make selection for player 2
         $data = [
-            'timestamp' => $this->app->input('timestamp', 'test'),
+            'name' => $this->app->input('fname', 'Anonymous Player'),
+            'timestamp' => $this->app->input('timestamp', 'no timestamp recorded'),
             'player1' => $player1Move,
             'player2' => $player2Move,
             'winner' => $winner,
@@ -51,9 +72,10 @@ class AppController extends Controller
         $this->app->redirect(
             '/',
             [
+            'name'=>$data['name'],
             'player1'=>$data['player1'],
             'player2'=>$data['player2'],
-            'winner'=>$data['winner']
+            'winner'=>$data['winner'],
         ]
         );
     }

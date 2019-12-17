@@ -5,6 +5,29 @@
 @endsection
 
 @section('content')
+
+@if($app->errorsExist())
+<ul class='error alert alert-danger'>
+    @foreach($app->errors() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+</ul>
+@endif
+<div class="alert gameresult">
+    @if($name)
+    Nice try, {{ $name }}!<br>
+    @endif
+    @if($player1)
+    You selected {{ $player1 }}<br>
+    @endif
+    @if($player2)
+    Computer selected {{ $player2 }}<br>
+    @endif
+
+    @if($winner)
+    Game Result: {{ $winner }}
+    @endif
+</div>
 <a href="/attempts">View the history of attempts </a>
 <h2>Instructions</h2>
 <ul>
@@ -18,6 +41,11 @@
 </ul>
 
 <form method="POST" action="/process">
+
+    <label for="fname">Your Name:</label>
+    <br>
+    <input type="text" id="fname" name="fname" value="{{ $app->old('name')}}">
+    <br>
     <input type="hidden" id="timestamp" name="timestamp" value="2019-12-13 23:06:54">
 
     <input type="radio" id="rock" name="choice" value="rock">
@@ -33,14 +61,8 @@
     <button type="submit" class="btn btn-primary">Play!</button>
 </form>
 
-@if($player1)
-<div class="alert alert-success">
-    You selected {{$player1}}
-    <br>
-    Computer selected
-    <br>
-    Game Result:
-</div>
-@endif
+
+
+
 
 @endsection
