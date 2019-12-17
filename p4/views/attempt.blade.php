@@ -9,6 +9,6 @@ Attempt {{ $attempt['id'] }} Details
 Played at {{ $attempt['timestamp'] }} <br>
 Player {{ $attempt['name'] }} selected {{ $attempt['player1'] }} <br>
 Computer selected {{ $attempt['player2'] }} <br>
-The winner is {{ $attempt['winner'] }} <br>
+The winner is {{ $attempt['winner'] }} {{ $attempt['name'] }}<br>
 <a href="/attempts">View the history of attempts </a>
 @endsection

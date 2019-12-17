@@ -13,6 +13,14 @@
     @endforeach
 </ul>
 @endif
+
+@if($app->old('tie'))
+<div class="alert alert-warning">
+    It's a tie...
+</div>
+@endif
+
+
 <div class="alert gameresult">
     @if($name)
     Nice try, {{ $name }}!<br>
@@ -23,11 +31,20 @@
     @if($player2)
     Computer selected {{ $player2 }}<br>
     @endif
-
-    @if($winner)
-    Game Result: {{ $winner }}
-    @endif
 </div>
+
+@if($winner['Player'])
+player won
+@endif
+
+@if($winner['Computer'])
+computer won
+@endif
+
+@if($winner['Tie'])
+tie
+@endif
+
 <a href="/attempts">View the history of attempts </a>
 <h2>Instructions</h2>
 <ul>

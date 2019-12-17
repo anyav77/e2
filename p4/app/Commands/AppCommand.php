@@ -25,7 +25,6 @@ class AppCommand extends Command
     {
         # Instantiate a new instance of the Faker\Factory class
         $faker = \Faker\Factory::create();
-
         # Use a loop to create 10 attempts
         for ($i = 0; $i < 10; $i++) {
 

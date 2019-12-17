@@ -15,6 +15,7 @@ class AppController extends Controller
         $player1 = $this->app->old('player1', null);
         $player2 = $this->app->old('player2', null);
         $winner = $this->app->old('winner', null);
+
         return $this->app->view('index', [
             'name' => $name,
             'player1' => $player1,
@@ -52,11 +53,14 @@ class AppController extends Controller
         # Compare the results; determine the winner
 
         if ($player1Move == $player2Move) {
-            $winner = "It is a tie";
+            $winner = "Tie";
+        //return $this->app->redirect('/', ['tie' => true]);
         } elseif (($player1Move == "rock" and $player2Move == "scissors") || ($player1Move == "paper" and $player2Move == "rock") || ($player1Move == "scissors" and $player2Move == "paper")) {
-            $winner = 'You won!';
+            $winner = 'Player';
+        //return $this->app->redirect('/', ['playerwon' => true]);
         } else {
-            $winner = 'Computer won...';
+            $winner = 'Computer';
+            //return $this->app->redirect('/', ['computerwon' => true]);
         }
 
         # extract the data from the form, make selection for player 2
