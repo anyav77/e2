@@ -36,6 +36,10 @@
 @if($player1)
 <div class="alert alert-success">
     You selected {{$player1}}
+    <br>
+    Computer selected
+    <br>
+    Game Result:
 </div>
 @endif
 
