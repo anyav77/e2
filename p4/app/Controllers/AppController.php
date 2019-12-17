@@ -16,10 +16,6 @@ class AppController extends Controller
         $player2 = $this->app->old('player2', null);
         $winner = $this->app->old('winner', null);
 
-        # DEBUG THE CONTENTS OF WINNER
-        dump($winner);
-        dump($player1);
-
         return $this->app->view('index', [
             'name' => $name,
             'player1' => $player1,
@@ -52,21 +48,16 @@ class AppController extends Controller
         $winner = null;
         $player1Move = $this->app->input('choice', 'test');
         $player2Move = $moves[rand(0, 2)];
-        //$timestamp = date('Y-m-d H:i:s');
-
 
         # Compare the results; determine the winner
-
         if ($player1Move == $player2Move) {
             $winner = "Tie";
-        //return $this->app->redirect('/', ['tie' => true]);
         } elseif (($player1Move == "rock" and $player2Move == "scissors") || ($player1Move == "paper" and $player2Move == "rock") || ($player1Move == "scissors" and $player2Move == "paper")) {
             $winner = 'Player';
-        //return $this->app->redirect('/', ['playerwon' => true]);
         } else {
             $winner = 'Computer';
-            //return $this->app->redirect('/', ['computerwon' => true]);
         }
+
         # extract the data from the form, make selection for player 2
         $data = [
             'name' => $this->app->input('fname', 'Anonymous Player'),
@@ -75,6 +66,7 @@ class AppController extends Controller
             'player2' => $player2Move,
             'winner' => $winner,
         ];
+        
         # send the data to the database and redirect to the index page
         $this->app->db()->insert('attempts', $data);
         $this->app->redirect(

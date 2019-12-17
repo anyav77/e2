@@ -14,43 +14,28 @@
 </ul>
 @endif
 
-@if($app->old('tie'))
+@if($name)
+<h4>Nice try, {{ $name }}!</h4>
+@endif
+
+@if($winner)
+Your move: {{ $player1 }}.
+Computer's move: {{ $player2 }}
+@if($winner == 'Player')
+<div class="alert alert-success">
+    Congratulations! You won.
+</div>
+@elseif($winner == 'Computer')
+<div class="alert alert-dark">
+    Sorry, you lost ...
+</div>
+@else
 <div class="alert alert-warning">
     It's a tie...
 </div>
-@elseif($app->old('playerwon'))
-<div class="alert alert-success">
-    You won!
-</div>
-@elseif($app->old('computerwon'))
-<div class="alert alert-dark">
-    You lost...
-</div>
+@endif
 @endif
 
-
-<div class="alert gameresult">
-    @if($name)
-    Nice try, {{ $name }}!<br>
-    @endif
-    @if($player1)
-    You selected {{ $player1 }}<br>
-    @endif
-    @if($player2)
-    Computer selected {{ $player2 }}<br>
-    @endif
-    @if($winner)
-    Winner is {{ $winner }}<br>
-    @endif
-</div>
-
-@if($winner['Player'])
-player won
-@elseif($winner['Computer'])
-computer won
-@elseif($winner['Tie'])
-tie
-@endif
 
 <a href="/attempts">View the history of attempts </a>
 <h2>Instructions</h2>

@@ -5,10 +5,10 @@ Attempt {{ $attempt['id'] }} Details
 @endsection
 
 @section('content')
-<h2>Attempt {{ $attempt['id'] }} Details</h2>
-Played at {{ $attempt['timestamp'] }} <br>
+<h2>Attempt {{ $attempt['id'] }}</h2>
+Played at {{ $attempt['timestamp'] }}: <br>
 Player {{ $attempt['name'] }} selected {{ $attempt['player1'] }} <br>
 Computer selected {{ $attempt['player2'] }} <br>
-The winner is {{ $attempt['winner'] }} {{ $attempt['name'] }}<br>
+<h4>Winner: {{ $attempt['winner'] }}</h4>
 <a href="/attempts">View the history of attempts </a>
 @endsection
