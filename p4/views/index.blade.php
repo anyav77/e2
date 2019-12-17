@@ -17,15 +17,20 @@
     <li>Scissors beat paper</li>
 </ul>
 
-<form method="POST" action="process/">
-    <label for="rock">Rock</label>
+<form method="POST" action="/process">
+    <input type="hidden" id="timestamp" name="timestamp" value="2019-12-13 23:06:54">
+
     <input type="radio" id="rock" name="choice" value="rock">
-    <label for="paper">Paper</label>
+    <label for="rock">Rock</label>
+
     <input type="radio" id="paper" name="choice" value="paper">
-    <label for="scissors">Scissors</label>
+    <label for="paper">Paper</label>
+
     <input type="radio" id="scissors" name="choice" value="scissors">
+    <label for="scissors">Scissors</label>
+
     <br>
-    <button type="submit">Submit Results</button>
+    <button type="submit" class="btn btn-primary">Play!</button>
 </form>
 
 @if($player1)

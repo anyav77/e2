@@ -23,17 +23,17 @@ class AppController extends Controller
     }
     public function process()
     {
-        //$choice = $this->app->input('choice', 'test');
-        //$choice = $this->app->inputAll();
-        //dump($choice);
+        //$choice = $this->app->input('choice');
 
+        # extract the data from the form
         $data = [
-            'player1' => $this->app->input('choice', 'test')
+            'timestamp' => $this->app->input('timestamp', 'test'),
+            'player1' => $this->app->input('choice', 'test'),
+            'player2' => $this->app->input('choice', 'test'),
+            'winner' => $this->app->input('choice', 'test'),
         ];
-        //dump($data);
+        # send the data to the database and redirect to the index page
         $this->app->db()->insert('attempts', $data);
-        //return "Process the form and persist the selection tothe database";
-        //$this->app->redirect('/', [$data]);
         $this->app->redirect('/', ['player1'=>$data['player1']]);
     }
 }
