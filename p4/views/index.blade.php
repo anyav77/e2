@@ -19,8 +19,8 @@
 @endif
 
 @if($winner)
-Your move: {{ $player1 }}.
-Computer's move: {{ $player2 }}
+You chose {{ $player1 }}.
+Computer chose {{ $player2 }}
 @if($winner == 'Player')
 <div class="alert alert-success">
     Congratulations! You won.
@@ -37,7 +37,7 @@ Computer's move: {{ $player2 }}
 @endif
 
 
-<a href="/attempts">View the history of attempts </a>
+<a href="/attempts">Game history </a>
 <h2>Instructions</h2>
 <ul>
     <li>Choose rock, paper, scissors from the list</li>

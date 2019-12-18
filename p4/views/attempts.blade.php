@@ -12,7 +12,8 @@ Attempts History
 @endif
 
 @section('content')
-<h2>Attempts History</h2>
+<a href="/">&larr; Return home </a>
+<h2>Game History</h2>
 
 <ul>
     @foreach($attempts as $attempt)

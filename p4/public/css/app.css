@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    margin: 0;
 }
 
 a#logo {
@@ -8,7 +9,7 @@ a#logo {
 }
 
 header {
-    margin: 20px 0 5px 0;
+    margin: 0 0 5px 0;
 }
 
 h2 {margin-top: 10px}

@@ -25,15 +25,17 @@ class AppCommand extends Command
     {
         # Instantiate a new instance of the Faker\Factory class
         $faker = \Faker\Factory::create();
+        $moveseed = ["rock", "paper", "scissors"];
+        $winnerseed = ["Computer", "Player"];
         # Use a loop to create 10 attempts
         for ($i = 0; $i < 10; $i++) {
 
             # Set up an attempt
             $attempt = [
                 'timestamp' => $faker->dateTimeThisMonth()->format('Y-m-d H:i:s'),
-                'player1' => $faker->word,
-                'player2' => $faker->word,
-                'winner' => $faker->word,
+                'player1' => $moveseed[rand(0, 2)],
+                'player2' => $moveseed[rand(0, 2)],
+                'winner' => $winnerseed[rand(0, 1)],
                 'name' => $faker->firstName,
             ];
 
