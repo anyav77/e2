@@ -3,5 +3,5 @@
 + Production URL: <http://p4.atozez.com>
 
 ## Outside resources
-[Bootstrap framework](https://getbootstrap.com/) 
-[PHP.net](https://www.php.net/manual/en/function.date.php)
+* [Bootstrap framework](https://getbootstrap.com/) 
+* [PHP.net](https://www.php.net/manual/en/function.date.php)

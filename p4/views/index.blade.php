@@ -41,7 +41,7 @@ Computer chose {{ $player2 }}
 <h2>Instructions</h2>
 <ul>
     <li>Choose rock, paper, scissors from the list</li>
-    <li>Click submit</li>
+    <li>Click "Play!"</li>
     <li>Your choice will be compared to the computer's choice:</li>
     <li>If the choices match, it's a tie</li>
     <li>Rock beats scissors</li>
