@@ -46,7 +46,7 @@ class AppController extends Controller
         
         $moves = ["rock", "paper", "scissors"];
         $winner = null;
-        $player1Move = $this->app->input('choice', 'test');
+        $player1Move = $this->app->input('choice', 'player did not make a choice');
         $player2Move = $moves[rand(0, 2)];
 
         # Compare the results; determine the winner
@@ -60,13 +60,13 @@ class AppController extends Controller
 
         # extract the data from the form, make selection for player 2
         $data = [
-            'name' => $this->app->input('fname', 'Anonymous Player'),
+            'name' => $this->app->input('name', 'Anonymous Player'),
             'timestamp' => date('Y-m-d H:i:s'),
             'player1' => $player1Move,
             'player2' => $player2Move,
             'winner' => $winner,
         ];
-        
+
         # send the data to the database and redirect to the index page
         $this->app->db()->insert('attempts', $data);
         $this->app->redirect(

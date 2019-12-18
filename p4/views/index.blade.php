@@ -51,9 +51,9 @@ Computer chose {{ $player2 }}
 
 <form method="POST" action="/process">
 
-    <label for="fname">Your Name:</label>
+    <label for="name">Your Name:</label>
     <br>
-    <input type="text" id="fname" name="fname" value="{{ $app->old('name')}}">
+    <input type="text" id="fname" name="name" value="{{ $app->old('name')}}">
     <br>
     <input type="radio" id="rock" name="choice" value="rock">
     <label for="rock">Rock</label>

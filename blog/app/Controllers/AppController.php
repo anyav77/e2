@@ -14,7 +14,7 @@ class AppController extends Controller
     public function saveNewPost()
     {
         $this->app->validate([
-            'title' => 'required',
+            //'title' => 'required',
             'content' => 'required|minLength:255', # Note how multiple validation rules are separated by a |
         ]);
         
