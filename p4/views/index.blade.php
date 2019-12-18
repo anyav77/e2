@@ -14,13 +14,13 @@
 </ul>
 @endif
 
-@if($name)
-<h4>Nice try, {{ $name }}!</h4>
+@if($confirmationName)
+<h4>Nice try, {{ $confirmationName }}!</h4>
 @endif
 
 @if($winner)
 You chose {{ $player1 }}.
-Computer chose {{ $player2 }}
+Computer chose {{ $player2 }}.
 @if($winner == 'Player')
 <div class="alert alert-success">
     Congratulations! You won.
