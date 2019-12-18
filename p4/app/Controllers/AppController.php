@@ -11,7 +11,7 @@ class AppController extends Controller
         # This following line would only get executed *if* all of the above validation tests passed
         # Otherwise, the user is auto-redirected back to the form
         $confirmationName = $this->app->old('confirmationName', null);
-        //$name = $this->app->old('name', null);
+        $name = $this->app->old('name', null);
         $player1 = $this->app->old('player1', null);
         $player2 = $this->app->old('player2', null);
         $winner = $this->app->old('winner', null);
@@ -73,6 +73,7 @@ class AppController extends Controller
             '/',
             [
             'confirmationName'=>$data['name'],
+            'name'=>$data['name'],
             'player1'=>$data['player1'],
             'player2'=>$data['player2'],
             'winner'=>$data['winner'],
