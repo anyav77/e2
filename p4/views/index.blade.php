@@ -53,7 +53,7 @@ Computer chose {{ $player2 }}.
 
     <label for="name">Your Name:</label>
     <br>
-    <input type="text" id="fname" name="name" value="{{ $app->old('name')}}">
+    <input type="text" id="name" name="name" value="{{ $app->old('name')}}">
     <br>
     <input type="radio" id="rock" name="choice" value="rock">
     <label for="rock">Rock</label>
